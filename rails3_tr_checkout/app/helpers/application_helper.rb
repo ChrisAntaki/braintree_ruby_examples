@@ -29,11 +29,7 @@ module ApplicationHelper
     protected
 
     def determine_value(method)
-      if @braintree_params
-        @braintree_params[method]
-      else
-        nil
-      end
+      @braintree_params[method] if @braintree_params
     end
 
     def validation_errors(method)
