@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(:version => 20110725141224) do
   create_table "products", :force => true do |t|
     t.string   "name"
     t.float    "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(:version => 20110725141224) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                            :null => false
+    t.datetime "updated_at",                                            :null => false
     t.text     "braintree_customer_id"
   end
 
