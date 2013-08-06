@@ -3,9 +3,6 @@ class CreditCardInfoController < ApplicationController
 
   def edit
     @credit_card = Braintree::CreditCard.find(params[:id])
-    @tr_data = Braintree::TransparentRedirect.
-                update_credit_card_data(:redirect_url => confirm_credit_card_info_url,
-                                        :payment_method_token => @credit_card.token)
   end
 
   def confirm
